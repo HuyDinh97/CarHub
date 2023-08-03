@@ -4,7 +4,7 @@ export async function fetchCar(filters: FillterProps) {
   const { manufacturer, year, model, limit, fuel } = filters;
   
   const headers = {
-    'X-Api-Key': 'CSM7HwLFrgHXUWYnWu191Q==ikW0IWnq0GcKUyAu',
+    'X-Api-Key': 'Hov9ZtEuszmjaBKK8C2vc9e7v5tZkoXbyCn2YTiv',
   }
 
   const response = await fetch(`https://api.api-ninjas.com/v1/cars?make=${manufacturer}&year=${year}&model=${model}&limit=${limit}&fuel_type=${fuel}`, {
