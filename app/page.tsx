@@ -5,9 +5,10 @@ import { CarCard, CustomFilter, Hero, SearchBar, ShowMore } from "@/components";
 import { fuels, yearsOfProduction } from "@/constants";
 import { fetchCar } from "@/utils";
 import Image from 'next/image';
+import { CarProps } from '@/types';
 
 export default function Home() {
-  const [allCars, setAllCars] = useState([]);
+  const [allCars, setAllCars] = useState<any>([]);
   const [loading, setLoading] = useState(false);
   
   const [manufacturer, setManufacturer] = useState("");
@@ -44,7 +45,7 @@ export default function Home() {
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 ||  !allCars;
 
   return (
-    <main className=" overflow-hidden">
+    <main className="overflow-hidden">
       <Hero />
 
       <div className="mt-12 padding-x padding-y max-width" id="discover">
@@ -66,7 +67,7 @@ export default function Home() {
         {allCars.length > 0 ? (
           <section>
             <div className='home__cars-wrapper'>
-              {allCars?.map((car) => (
+              {allCars?.map((car: CarProps) => (
                 <CarCard car={car} />
               ))}
             </div>

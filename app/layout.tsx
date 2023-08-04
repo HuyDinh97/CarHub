@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 
 export const metadata: Metadata = {
-  title: 'movie web',
+  title: 'CarHub',
 }
 
 export default function RootLayout({
